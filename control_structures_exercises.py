@@ -77,18 +77,45 @@ for i in range(1, 11):
 
 #Create a for loop that uses print to create the output shown below.
 
+for number in range(10):
+    print(str(number) * number)
+
 #C)Break and Continue
 
 #Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement
      
-other_odd_input = input('please enter an odd number between 1 and 50. ')
-for n in range(0, 51):
-    if n != other_odd_input and n % 2 == 0:
-        continue
-    print('Here is an odd number: {}'.format(n))
-if n == ['odd']:
-    print('Skip: {}'.format(n))
- 
+odd_nums = [x for x in range(50) if x % 2 == 1]
+
+def odd_number_loop(start_at, end_at):
+    for on_num in range(start_at, end_at + 1, 2):
+        print(f'Here is an odd integer:{on_num:>3}')
+
+def check_user_number():
+    user_input = input('Input only odd numbers less than 50: ')
+    
+    while True:
+        if user_input.isdigit() == False:
+            print(f'{user_input} not and integer')
+            break
+
+        user_input = int(user_input)
+        
+        if user_input not in odd_nums:
+            print(f'{user_input} not and odd number')
+            break
+            
+        if user_input > 1:
+            odd_number_loop(1, user_input - 2)
+
+        print(f'Yikes! Skipping number:{user_input:>3}')
+
+        if user_input < 49:
+            odd_number_loop(user_input + 2, 49)
+            
+        user_input = input('Please use and odd integer less than 50:')
+
+check_user_number()
+
  #D)
      
 # The input function can be used to prompt for input and use that input in your python code. 
@@ -96,5 +123,82 @@ if n == ['odd']:
 # (Hints: first make sure that the value the user entered is a valid number, 
 # also note that the input function returns a string, so you'll need to convert this to a numeric type.)
 
+def print_count_to_number(start_at, end_at, increment):
+    count_out = [print(num) for num in range(start_at, end_at, increment)]
+
+
+def count_to_user_number():
+    user_input = input('positive integer output: ')
+    
+    while True:
+        if user_input.isdigit() == False:
+            print(f'{user_input} not a positive integer')
+            break
+
+        user_int = int(user_input)
+        
+        if user_int > 0:
+            print_count_to_number(0, user_int+1, 1)
+            
+        user_input = input('please provied a positive integer: ')
+
+        
+count_to_user_number()
+
+
 #E) 
-# Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1. 
+# Write a program that prompts the user for a positive integer. 
+# Next write a loop that prints out the numbers from the number the user entered down to 1. 
+
+is_not_digit = True
+while is_not_digit:
+    count_from = input('Countdown for liftoff:\n')
+    if count_from.isdigit():
+        count_from = int(count_from)
+    if count_from >= 0:
+        is_not_digit = False
+
+for n in range(count_from, 0, -1):
+    print(n)
+
+
+# 3) Fizzbuzz
+
+#One of the most common interview questions for entry-level programmers is the FizzBuzz test. 
+#Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
+
+# Write a program that prints the numbers from 1 to 100.
+# For multiples of three print "Fizz" instead of the number
+# For the multiples of five print "Buzz".
+# For numbers which are multiples of both three and five print "FizzBuzz".
+
+for n in range(1, 101, 1):
+    if n % 5 == 0 and n % 3 == 0:
+        print('FizzBuzz')
+    elif n % 5 == 0:
+        print('Buzz')
+    elif n % 3 == 0:
+        print('Fizz')
+    else:
+        print(n)
+
+# 4) Display a table of powers.
+
+# Prompt the user to enter an integer.
+# Display a table of squares and cubes from 1 to the value entered.
+# Ask if the user wants to continue.
+# Assume that the user will enter valid data.
+# Only continue if the user agrees to.
+
+number = input ("What number would you like to go up to? ")
+
+number = int(number) 
+#squared = int(number) * int(number) 
+#cubed = int(number) * int(number) * int(number)
+
+print('n','sq','cb' )
+for i in range(1, number+1):    
+    squared = int(i) * int(i) 
+    cubed = int(i) * int(i) * int(i)
+
+    print(i, squared, cubed)
