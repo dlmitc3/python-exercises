@@ -1,11 +1,8 @@
 #1) Conditional Basics
 
 #A) prompt the user for a day of the week, print out whether the day is Monday or not
-from cProfile import run
-
-
 day = input('day_of_the_week?')
-if day == 'Monday':
+if day.lower in ['mon', 'monday']:
     print('Happy Monday')
 else:
     print('Today is not Monday')
