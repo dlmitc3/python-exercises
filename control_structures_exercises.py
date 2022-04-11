@@ -1,8 +1,10 @@
 #1) Conditional Basics
 
 #A) prompt the user for a day of the week, print out whether the day is Monday or not
-day = input('day_of_the_week?')
-if day.lower in ['mon', 'monday']:
+
+day = input('day_of_the_week?'  )
+
+if day.lower() in ['monday', 'mon']:
     print('Happy Monday')
 else:
     print('Today is not Monday')
@@ -84,37 +86,26 @@ for number in range(10):
 
 #Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement
      
-odd_nums = [x for x in range(50) if x % 2 == 1]
+num = input ('Please enter only odd number 1, 50' )
 
-def odd_number_loop(start_at, end_at):
-    for on_num in range(start_at, end_at + 1, 2):
-        print(f'Here is an odd integer:{on_num:>3}')
+while True:
+    if (num.isdigit = False or int(num) > 50 or int(num) < 1 or int(num) % 2 == 0):
+        print('invald input')
+        num = input('Please enter only odd number 1, 50'):
+    else
+        break   
 
-def check_user_number():
-    user_input = input('Input only odd numbers less than 50: ')
-    
-    while True:
-        if user_input.isdigit() == False:
-            print(f'{user_input} not and integer')
-            break
+num = int(num)
 
-        user_input = int(user_input)
-        
-        if user_input not in odd_nums:
-            print(f'{user_input} not and odd number')
-            break
-            
-        if user_input > 1:
-            odd_number_loop(1, user_input - 2)
+print('number to skip is:' num)
 
-        print(f'Yikes! Skipping number:{user_input:>3}')
-
-        if user_input < 49:
-            odd_number_loop(user_input + 2, 49)
-            
-        user_input = input('Please use and odd integer less than 50:')
-
-check_user_number()
+for i in range(1,50):
+    if i % 2 == 0:
+        continue
+    elif i == num:
+        print('Yikes, please skip', i)
+    else:
+        print('Here is odd number', i)    
 
  #D)
      
