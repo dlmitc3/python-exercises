@@ -1,6 +1,9 @@
 #1) Conditional Basics
 
 #A) prompt the user for a day of the week, print out whether the day is Monday or not
+from cProfile import run
+
+
 day = input('day_of_the_week?')
 if day == 'Monday':
     print('Happy Monday')
@@ -202,3 +205,116 @@ for i in range(1, number+1):
     cubed = int(i) * int(i) * int(i)
 
     print(i, squared, cubed)
+
+
+# Bonus: Research python's format string specifiers to align the table
+
+# 5) Convert given number grades into letter grades.
+
+    # Prompt the user for a numerical grade from 0 to 100.
+    # Display the corresponding letter grade.
+    # Prompt the user to continue.
+    # Assume that the user will enter valid integers for the grades.
+    # The application should only continue if the user agrees to.
+    # Grade Ranges:
+        # A : 100 - 88
+        # B : 87 - 80
+        # C : 79 - 67
+        # D : 66 - 60
+        # F : 59 - 0
+
+run_loop = True
+while run_loop:
+
+    grade = input ("please input numerical grade between 1, 100"  )
+
+    grade = int(grade)
+
+    if grade >= 88:
+        print(f'{grade} is an A --congradulations!!')
+    elif grade >= 80:
+        print(f'{grade} is an B --keep up the good work!')
+    elif grade >= 67:
+        print(f'{grade} is an C --nice work!')
+    elif grade >= 60:
+        print(f'{grade} is an D --try harder next time!')
+    else:
+        print(f'{grade} is an F --Failed, try again!')
+
+    user_choice = input(" Do you want to continue?   type 'y' for YES,  or  'n' for NO")
+
+    run_loop = user_choice.lower() in ['y', 'yes']
+
+print("Thanks for using this app")
+
+
+# Bonus
+
+#Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
+
+run_loop = True
+while run_loop:
+
+    grade = input ("please input numerical grade between 1, 100"  )
+
+    grade = int(grade)
+
+    if grade >= 98:
+        print(f'{grade} is an A+ --congradulations!!')
+    elif grade >= 93:
+        print(f'{grade} is an A --keep up the good work!') 
+    elif grade >= 90:
+        print(f'{grade} is an A- --good work!')     
+    elif grade >= 89:
+        print(f'{grade} is an B+ --keep it up!')
+    elif grade >= 83:
+        print(f'{grade} is an B --nice work!')
+    elif grade >= 80:
+        print(f'{grade} is an B- --try harder next time!')
+    elif grade >= 79:
+        print(f'{grade} is an C+ --good work!')     
+    elif grade >= 73:
+        print(f'{grade} is an C --keep up the good work!')
+    elif grade >= 70:
+        print(f'{grade} is an C- --nice work!')
+    elif grade >= 69:
+        print(f'{grade} is an D+ --try harder next time!')
+    elif grade >= 63:
+        print(f'{grade} is an D --good work!')     
+    elif grade >= 60:
+        print(f'{grade} is an D- --work harder next time!')
+    else:
+        print(f'{grade} is an F --Failed, try again!')
+
+    user_choice = input(" Do you want to continue?   type 'y' for YES,  or  'n' for NO")
+
+    run_loop = user_choice.lower() in ['y', 'yes']
+
+print("Thanks for using this app")
+
+
+#6) Create a list of dictionaries where each dictionary represents a book that you have read. 
+# Each dictionary in the list should have the keys title, author, and genre. 
+# Loop through the list and print out information about each book.
+
+
+dictionary = [{"yr": "year", "ge": "genre", "au": "author", "title": "key_title"}]
+
+print(dictionary)
+
+
+    {"ge": "genre" ["fiction", " autobiography", "fantacy"]},
+    {"au": "author" ["Herman_Melville", "David_Wilson", "J.K.Rowling"]},
+    {"title": "key_title" ["Moby-Dick", "Twelve Years a Slave", "Harry_Potter and The Philospher's Stone"]}]         
+
+print(dictionary)
+
+for i in dictionary:
+    if i ["tpye"] == "categorical" of i["type"] == "boolean":
+        print(f"{i["author"]} is not numeric, skipping")
+        continue
+
+print("thanks")
+
+    # A) Prompt the user to enter a genre, then loop through your books 
+    # list and print out the titles of all the books in that genre.
