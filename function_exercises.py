@@ -10,7 +10,7 @@
 
 def is_two(num):
 
-     if num in [2, '2']:
+     if num in [2 , '2']:
          return True
      else:
          return False
@@ -87,7 +87,7 @@ def handle_commas(x):
     if no_commas.isdigit():
         return int(no_commas)
     else:
-        print('Get outta here with those letters!')
+        print('No letters !')
 
 handle_commas(input('Enter a large number:'))
 
@@ -192,8 +192,8 @@ sayhello (input(str("What is your class name:  ")))
 
 # 1) Create a function named twelveto24. 
 # It should accept a string in the format 10:45am or 4:30pm and return a string 
-# that is the representation of the time in a 24-hour format. Bonus write a 
-# function that does the opposite.
+# that is the representation of the time in a 24-hour format. 
+
 
 def convert(string):
 
@@ -210,9 +210,31 @@ def convert(string):
         return str(int(string[:2]) + 12) + string[2:8]
 
 #driver code
-time = input("Input time in a 12-hour format: hh:mm:ss"  )
+time = input("Input time in a 12-hour format: hh:mm:ss AM or PM"  )
 print("12-hour Format time:: ", time)
 print("24-hour Format time ::",convert(time))
+
+
+# Bonus write a function that does the opposite.
+
+def convert(string):
+
+    if string[-2:] == "AM" and string[:2] == "12":
+        return "00" + string[2:-2]
+
+    elif string[-2:] == "AM":
+        return string[:-2]
+
+    elif string[-2:] == "PM" and string[:2] == "12":
+        return string[:-2]
+        
+    else:
+        return str(int(string[:2]) - 12) + string[2:8]
+
+#driver code
+time = input("Input time in a 24-hour format: hh:mm:ss AM or PM"  )
+print("12-hour Format time:: ", convert(time))
+print("24-hour Format time ::",time)
 
 
 # 2) Create a function named col_index. 
@@ -221,5 +243,37 @@ print("24-hour Format time ::",convert(time))
     # col_index('B') returns 2
     # col_index('AA') returns 27
 
+
+# defined a single parameter, named col_index, and will return a string value
 def col_index(i):
-    if 
+
+ # Converting string to integer values, only if condition are met. else returning 
+ # a not found paramater and exiting program
+    if i.upper() == 'A':
+        return 'column number is: 1'
+    elif i.upper() == 'B':
+        return 'column number is: 2'
+    elif i.upper() in 'AA':
+        return 'column number is: 27'
+    else:
+        return ('column name and index not found')
+
+# input data used to check if statment passes argument
+col_index (input('spreadsheet column name:'   ))
+
+
+def col_index(i):
+
+    if i = ' abcdefghijklmnopqrstuvwxyz '
+ 
+def normalize_name(x):
+    norm_x = ''
+    prime_x = x.strip().lower()
+    for char in prime_x:
+        if char not in all_char:
+            continue
+        else:
+            norm_x += char
+    return norm_x.strip().replace(' ', '_')
+
+normalize_name(input('Enter your full name:'))
