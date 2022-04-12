@@ -262,18 +262,11 @@ def col_index(i):
 col_index (input('spreadsheet column name:'   ))
 
 
-def col_index(i):
+def col2num(col):
+    num = 0
+    for c in col:
+        if c in string.ascii_letters:
+            num = num * 26 + (ord(c.upper()) - ord('A')) + 1
+    return num
 
-    if i = ' abcdefghijklmnopqrstuvwxyz '
- 
-def normalize_name(x):
-    norm_x = ''
-    prime_x = x.strip().lower()
-    for char in prime_x:
-        if char not in all_char:
-            continue
-        else:
-            norm_x += char
-    return norm_x.strip().replace(' ', '_')
-
-normalize_name(input('Enter your full name:'))
+col2num (input('number is equal to:  '))
