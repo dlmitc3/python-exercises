@@ -15,7 +15,7 @@ def is_two(num):
      else:
          return False
 
-is_two (input('Only enter the nunmber 2, "otherwise answer will be False"'  ))
+is_two (input('Only enter the number 2, "otherwise answer will be False"'  ))
          
 
 
@@ -72,44 +72,44 @@ calculated_tip(.25, 40)
 #    It should accept a original price, and a discount percentage, and return the price after the discount is applied.
 
 def apply_discount(price, discount):
-     amount_discounted = price * discount
-     price_post_discount = price - amount_discounted
-     return price_post_discount
+    amount_discounted = price * discount
+    price_post_discount = price - amount_discounted
+    return price_post_discount
 
- apply_discount(50, .4)
+apply_discount(50, .4)
 
 
 # 7) Define a function named handle_commas. 
 #    It should accept a string that is a number that contains commas in it as input, and return a number as output.
 
 def handle_commas(x):
-     no_commas = x.replace(',', '')
-     if no_commas.isdigit():
-         return int(no_commas)
-     else:
-         print('Get outta here with those letters!')
+    no_commas = x.replace(',', '')
+    if no_commas.isdigit():
+        return int(no_commas)
+    else:
+        print('Get outta here with those letters!')
 
- handle_commas(input('Enter a large number:'))
+handle_commas(input('Enter a large number:'))
 
 
 # 8) Define a function named get_letter_grade. 
 #    It should accept a number and return the letter grade associated with that number (A-F).
 
 def get_letter_grade(x):
-     if x in range(0, 60):
-         return 'F'
-     elif x in range(60, 67):
-         return 'D'
-     elif x in range(67, 80):
-         return 'C'
-     elif x in range(80, 88):
-         return 'B'
-     elif x in range(88, 100):
-         return 'A'
-     else:
-         print('I dont know what to do...')  
+    if x in range(0, 60):
+        return 'F'
+    elif x in range(60, 67):
+        return 'D'
+    elif x in range(67, 80):
+        return 'C'
+    elif x in range(80, 88):
+        return 'B'
+    elif x in range(88, 100):
+        return 'A'
+    else:
+        print('I dont know what to do...')  
 
- get_letter_grade(int(input('Enter your grade')))
+get_letter_grade(int(input('Enter your grade')))
 
 
 # 9) Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
@@ -149,7 +149,7 @@ def normalize_name(x):
             norm_x += char
     return norm_x.strip().replace(' ', '_')
 
-normalize_name(input('Entere your full name:'))
+normalize_name(input('Enter your full name:'))
 
 
 # 11) Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
@@ -170,3 +170,56 @@ cumulative_sum(list)
 # Additional Exercise
 
 # Once you've completed the above exercises, follow the directions from https://gist.github.com/zgulde/ec8ed80ad8216905cda83d5645c60886 in order to thouroughly comment your code to explain your code.
+
+# our sayhello defines a single parameter, name that is a string, 
+# and will return a string value
+def sayhello(name):
+    ''''  Block of comment explaning what this function does
+    '''
+    # Check to see if the passed argument is equal to our cohort name
+    if name.lower() == "jamison":
+        # Craft the message to complete only is statment is True
+        message = "Goodmorning Jamison cohort!!! Have a great day!"
+    else:
+        # hello message will complete only if statemenb does not meet pass argument
+        message = f"Hello, {name}!"
+    # Regardless of the contents, we'll return the message variable from the function
+    return message
+# input data used to check if statment passes argument
+sayhello (input(str("What is your class name:  ")))
+
+# Bonus
+
+# 1) Create a function named twelveto24. 
+# It should accept a string in the format 10:45am or 4:30pm and return a string 
+# that is the representation of the time in a 24-hour format. Bonus write a 
+# function that does the opposite.
+
+def convert(string):
+
+    if string[-2:] == "AM" and string[:2] == "12":
+        return "00" + string[2:-2]
+
+    elif string[-2:] == "AM":
+        return string[:-2]
+
+    elif string[-2:] == "PM" and string[:2] == "12":
+        return string[:-2]
+        
+    else:
+        return str(int(string[:2]) + 12) + string[2:8]
+
+#driver code
+time = input("Input time in a 12-hour format: hh:mm:ss"  )
+print("12-hour Format time:: ", time)
+print("24-hour Format time ::",convert(time))
+
+
+# 2) Create a function named col_index. 
+# It should accept a spreadsheet column name, and return the index number of the column.
+    # col_index('A') returns 1
+    # col_index('B') returns 2
+    # col_index('AA') returns 27
+
+def col_index(i):
+    if 
