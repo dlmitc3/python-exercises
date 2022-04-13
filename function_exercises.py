@@ -15,7 +15,6 @@ def is_two(num):
      else:
          return False
 
-is_two (input('Only enter the number 2, "otherwise answer will be False"'  ))
          
 
 
@@ -29,7 +28,6 @@ def is_vowel(letter):
     else:
         return False
 
-is_vowel (input (str('Enter vowel only!')))
 
 # 3) Define a function named is_consonant. 
 #    It should return True if the passed string is a consonant, False otherwise. 
@@ -42,7 +40,6 @@ def is_consonant(i):
     else:
         return True
 
-is_consonant (input (str('Enter Consonant only!')))
 
 
 # 4) Define a function that accepts a string that is a word. 
@@ -56,7 +53,6 @@ def is_word(x):
         print('does not start with consonant or not a word')
         return x 
 
-is_word(input(str('Enter a word:')))
 
 
 # 5) Define a function named calculate_tip. 
@@ -66,7 +62,6 @@ def calculated_tip(tip_percent, bill):
     amount_to_tip = tip_percent * bill
     return amount_to_tip
 
-calculated_tip(.25, 40)
 
 # 6) Define a function named apply_discount. 
 #    It should accept a original price, and a discount percentage, and return the price after the discount is applied.
@@ -76,7 +71,6 @@ def apply_discount(price, discount):
     price_post_discount = price - amount_discounted
     return price_post_discount
 
-apply_discount(50, .4)
 
 
 # 7) Define a function named handle_commas. 
@@ -89,7 +83,6 @@ def handle_commas(x):
     else:
         print('No letters !')
 
-handle_commas(input('Enter a large number:'))
 
 
 # 8) Define a function named get_letter_grade. 
@@ -109,7 +102,6 @@ def get_letter_grade(x):
     else:
         print('I dont know what to do...')  
 
-get_letter_grade(int(input('Enter your grade')))
 
 
 # 9) Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
@@ -123,7 +115,6 @@ def remove_vowels(x):
             r_vow += char
     return r_vow
 
-remove_vowels(input('Enter a word:'))
 
 # 10) Define a function named normalize_name. 
 #   It should accept a string and return a valid python identifier, that is:
@@ -149,7 +140,6 @@ def normalize_name(x):
             norm_x += char
     return norm_x.strip().replace(' ', '_')
 
-normalize_name(input('Enter your full name:'))
 
 
 # 11) Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
@@ -186,7 +176,6 @@ def sayhello(name):
     # Regardless of the contents, we'll return the message variable from the function
     return message
 # input data used to check if statment passes argument
-sayhello (input(str("What is your class name:  ")))
 
 # Bonus
 
@@ -210,7 +199,6 @@ def convert(string):
         return str(int(string[:2]) + 12) + string[2:8]
 
 #driver code
-time = input("Input time in a 12-hour format: hh:mm:ss AM or PM"  )
 print("12-hour Format time:: ", time)
 print("24-hour Format time ::",convert(time))
 
@@ -232,7 +220,6 @@ def convert(string):
         return str(int(string[:2]) - 12) + string[2:8]
 
 #driver code
-time = input("Input time in a 24-hour format: hh:mm:ss AM or PM"  )
 print("12-hour Format time:: ", convert(time))
 print("24-hour Format time ::",time)
 
@@ -259,7 +246,6 @@ def col_index(i):
         return ('column name and index not found')
 
 # input data used to check if statment passes argument
-col_index (input('spreadsheet column name:'   ))
 
 
 def col2num(col):
@@ -269,6 +255,21 @@ def col2num(col):
             num = num * 26 + (ord(c.upper()) - ord('A')) + 1
     return num
 
-col2num (input('number is equal to:  '))
+
 
 if __name__ == "__main__":
+    col2num (input('number is equal to:  '))
+    col_index (input('spreadsheet column name:'   ))
+    is_two (input('Only enter the number 2, "otherwise answer will be False"'  ))
+    is_vowel (input (str('Enter vowel only!')))
+    is_consonant (input (str('Enter Consonant only!')))
+    is_word(input(str('Enter a word:')))
+    calculated_tip(.25, 40)
+    apply_discount(50, .4)
+    handle_commas(input('Enter a large number:'))
+    get_letter_grade(int(input('Enter your grade')))
+    time = input("Input time in a 24-hour format: hh:mm:ss AM or PM"  )
+    time = input("Input time in a 12-hour format: hh:mm:ss AM or PM"  )
+    sayhello (input(str("What is your class name:  ")))
+    normalize_name(input('Enter your full name:'))
+    remove_vowels(input('Enter a word:'))
