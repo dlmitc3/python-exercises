@@ -16,8 +16,6 @@ def is_two(num):
          return False
 
          
-
-
 # 2) Define a function named is_vowel. 
 #    It should return True if the passed string is a vowel, False otherwise.
 
@@ -52,8 +50,6 @@ def is_word(x):
     else:
         print('does not start with consonant or not a word')
         return x 
-
-
 
 # 5) Define a function named calculate_tip. 
 #    It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
@@ -151,8 +147,6 @@ def cumulative_sum(x):
         x[n] += sum(x[n - 1:n])
         return x
 
-
-
 list = [1, 2, 3, 4]
 cumulative_sum(list)
 
@@ -199,8 +193,7 @@ def convert(string):
         return str(int(string[:2]) + 12) + string[2:8]
 
 #driver code
-print("12-hour Format time:: ", time)
-print("24-hour Format time ::",convert(time))
+
 
 
 # Bonus write a function that does the opposite.
@@ -220,8 +213,7 @@ def convert(string):
         return str(int(string[:2]) - 12) + string[2:8]
 
 #driver code
-print("12-hour Format time:: ", convert(time))
-print("24-hour Format time ::",time)
+
 
 
 # 2) Create a function named col_index. 
@@ -273,3 +265,7 @@ if __name__ == "__main__":
     sayhello (input(str("What is your class name:  ")))
     normalize_name(input('Enter your full name:'))
     remove_vowels(input('Enter a word:'))
+print("12-hour Format time:: ", time)
+print("24-hour Format time ::",convert(time))
+print("12-hour Format time:: ", convert(time))
+print("24-hour Format time ::",time)
