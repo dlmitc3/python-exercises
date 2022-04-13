@@ -247,11 +247,11 @@ def col2num(col):
             num = num * 26 + (ord(c.upper()) - ord('A')) + 1
     return num
 
-
-
-print(' Import function_evercises')
-
 test = 'Test String'
+
+print('Import function_evercises')
+
+
 
 
 if __name__ == "__main__":
