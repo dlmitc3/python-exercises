@@ -249,6 +249,11 @@ def col2num(col):
 
 
 
+print(' Import function_evercises')
+
+test = 'Test String'
+
+
 if __name__ == "__main__":
     col2num (input('number is equal to:  '))
     col_index (input('spreadsheet column name:'   ))
