@@ -270,3 +270,5 @@ def col2num(col):
     return num
 
 col2num (input('number is equal to:  '))
+
+if __name__ == "__main__":
