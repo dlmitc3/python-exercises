@@ -54,7 +54,7 @@ def is_word(x):
 # 5) Define a function named calculate_tip. 
 #    It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
 
-def calculated_tip(tip_percent, bill):
+def calculate_tip(tip_percent, bill):
     amount_to_tip = tip_percent * bill
     return amount_to_tip
 
@@ -261,7 +261,7 @@ if __name__ == "__main__":
     is_vowel (input (str('Enter vowel only!')))
     is_consonant (input (str('Enter Consonant only!')))
     is_word(input(str('Enter a word:')))
-    calculated_tip(.25, 40)
+    calculate_tip(.25, 40)
     apply_discount(50, .4)
     handle_commas(input('Enter a large number:'))
     get_letter_grade(int(input('Enter your grade')))
